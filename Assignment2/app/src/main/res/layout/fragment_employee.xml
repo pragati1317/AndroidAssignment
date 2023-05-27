@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+
+    <!-- Add a ScrollView to enable scrolling if the table is too long -->
+
+
+        <!-- Add a TableLayout to display the data as a table -->
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999">
+
+        <!-- Add the table headers -->
+        <TableRow>
+
+            <TextView
+                android:id="@+id/id_header"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:text="ID"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_header"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:text="Name"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dob_header"
+                android:layout_width="wrap_content"
+                android:padding="8dp"
+                android:text="DOB"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/salary_header"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:text="Salary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:layout_height="141dp">
+
+            <TextView
+                android:id="@+id/view_id"
+                android:hint="ID"
+                android:layout_width="wrap_content"
+                android:textSize="8sp"
+                android:padding="8dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/view_name"
+                android:hint="Name"
+                android:layout_width="wrap_content"
+                android:padding="8dp"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/view_dob"
+                android:layout_width="wrap_content"
+                android:hint="DOB"
+                android:padding="8dp"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/view_salary"
+                android:layout_width="wrap_content"
+                android:hint="Salary"
+                android:padding="8dp"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <!-- Add the table rows dynamically using Java code -->
+    </TableLayout>
+
+    <!-- Add the navigation buttons for browsing through rows -->
+
+    <Button
+        android:id="@+id/previous_button"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_weight="1"
+        android:text="Prev"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_layout" />
+
+
+    <!-- Add the back button to return to the MainActivity -->
+    <Button
+        android:id="@+id/nextbutton"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_weight="1"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toBottomOf="@+id/table_layout" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_layout"
+        app:layout_constraintVertical_bias="0.83" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
